@@ -18,12 +18,13 @@ for file in files:
     print(df.isna().sum())
 
     print("Duplicate rows:", df.duplicated().sum())
-    print("Duplicated timestamps", df["time"].duplicated().sum())
 
     print("Data types before conversion:")
     print(df.dtypes)
 
     df["time"] = pd.to_datetime(df["time"], errors="coerce")
+
+    print("Duplicated timestamps", df["time"].duplicated().sum())
 
     print("Invalid timestamps:", df["time"].isna().sum())
 
