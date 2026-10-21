@@ -24,9 +24,20 @@ for file in files:
 
     df["time"] = pd.to_datetime(df["time"], errors="coerce")
 
+    time_diffs = df["time"].sort_values().diff().dropna()
+
+    print("Time interval summary:")
+    print(time_diffs.describe())
+
+    print("Most common time intervals:")
+    print(time_diffs.value_counts().head(10))
+
     print("Duplicated timestamps", df["time"].duplicated().sum())
 
     print("Invalid timestamps:", df["time"].isna().sum())
+
+    print("Numeric summary:")
+    print(df.describe().T.to_string())
 
     results.append({
         "file": os.path.basename(file),
@@ -35,10 +46,21 @@ for file in files:
         "missing_values": int(df.isna().sum().sum()),
         "duplicate_rows": int(df.duplicated().sum()),
         "duplicate_timestamps": int(df["time"].duplicated().sum()),
-        "invalid_timestamps": int(df["time"].isna().sum())
+        "invalid_timestamps": int(df["time"].isna().sum()),
+        "min_interval": str(time_diffs.min()),
+        "max_interval": str(time_diffs.max())
     })
 
 results_df = pd.DataFrame(results)
 
 print("\nValidation summary:")
 print(results_df.to_string(index=False))
+
+os.makedirs("data/processed", exist_ok=True)
+
+results_df.to_csv(
+    "data/processed/validation_summary.csv",
+    index=False
+)
+
+print("Validation symmary saved.")

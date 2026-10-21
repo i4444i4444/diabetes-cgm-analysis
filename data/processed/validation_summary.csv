@@ -1,0 +1,26 @@
+file,rows,columns,missing_values,duplicate_rows,duplicate_timestamps,invalid_timestamps,min_interval,max_interval
+HUPA0001P.csv,4096,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0002P.csv,3181,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0003P.csv,3770,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0004P.csv,3184,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0005P.csv,3858,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0006P.csv,2290,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0007P.csv,3857,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0009P.csv,3812,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0010P.csv,2976,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0011P.csv,3839,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0014P.csv,3829,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0015P.csv,3792,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0016P.csv,3835,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0017P.csv,3599,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0018P.csv,3895,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0019P.csv,3711,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0020P.csv,2862,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0021P.csv,2343,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0022P.csv,4023,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0023P.csv,3919,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0024P.csv,2902,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0025P.csv,4006,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0026P.csv,40605,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0027P.csv,165306,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
+HUPA0028P.csv,25902,8,0,0,0,0,0 days 00:05:00,0 days 00:05:00
