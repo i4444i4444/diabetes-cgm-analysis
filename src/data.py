@@ -48,7 +48,7 @@ def save_coverage(data):
     coverage = data.groupby("patient_id")["time"].agg(["min", "max", "size"])
     coverage.columns = ["start", "end", "rows"]
     coverage["days"] = (coverage["end"] - coverage["start"]).dt.days
-    coverage.to_csv(OUT_DIR / "coverage.csv")
+    coverage.to_csv(OUT_DIR / "coverage.csv", lineterminator="\n")
     return coverage
 
 
