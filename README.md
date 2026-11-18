@@ -70,22 +70,6 @@ The notebook `01_data_exploration.ipynb` currently includes:
 
 Further analysis will extend these results to all participants.
 
-## Project Structure
-
-```
-diabetes-cgm-analysis/
-├── data/
-│   ├── raw/                 # original CSV files (not tracked by git)
-│   └── processed/           # unified dataset and validation output
-├── notebooks/               # exploratory analysis
-├── scripts/                 # standalone validation script
-├── src/
-│   └── data.py              # builds the unified dataset
-├── data_dictionary.md       # column meanings, units and known issues
-├── requirements.txt
-└── README.md
-```
-
 ## How to Run
 
 1. Install the dependencies:
