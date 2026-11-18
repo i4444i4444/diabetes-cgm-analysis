@@ -66,14 +66,59 @@ The notebook `01_data_exploration.ipynb` currently includes:
 - Glucose distribution histograms with different bin counts
 - Descriptive statistics: mean, median, standard deviation, minimum, and maximum
 - Percentages of measurements within selected glucose ranges
+- Loading the unified dataset and verifying its size and patient count
 
 Further analysis will extend these results to all participants.
+
+## Project Structure
+
+```
+diabetes-cgm-analysis/
+├── data/
+│   ├── raw/                 # original CSV files (not tracked by git)
+│   └── processed/           # unified dataset and validation output
+├── notebooks/               # exploratory analysis
+├── scripts/                 # standalone validation script
+├── src/
+│   └── data.py              # builds the unified dataset
+├── data_dictionary.md       # column meanings, units and known issues
+├── requirements.txt
+└── README.md
+```
+
+## How to Run
+
+1. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Place the raw CSV files into `data/raw/`.
+
+3. Build the unified dataset. This writes `data/processed/patients.parquet` and `data/processed/coverage.csv`:
+
+   ```bash
+   python src/data.py
+   ```
+
+   Expected output:
+
+   ```
+   Rows: 309392
+   Patients: 25
+   Missing values: 0
+   Duplicate patient+time rows: 0
+   ```
+
+4. Open a notebook from the `notebooks/` folder and run it from there, because the notebooks use paths relative to that folder.
 
 ## Technologies
 
 - Python
 - pandas
 - Matplotlib
+- PyArrow (Parquet storage)
 - Jupyter Notebook
 - Git and GitHub
 - PostgreSQL (planned)
